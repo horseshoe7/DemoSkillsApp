@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  TopTalInterview
+//  DemoSkillsApp
 //
 //  Created by Stephen O'Connor on 19.01.21.
 //
@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ = log // initialize log
         print("Starting...")
         
+        
+        configureServerMocking()
+        
         // because we forego the @UIApplicationMain specifier, we have to manually create a window and its rootViewController
         // we forego that because we use the AppDelegateForTesting approach in order to speed up the running of unit tests
         // and to not have to have a "fat test host" for unit tests.
@@ -29,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    private func configureServerMocking() {
+        ServerMock.initialize(enabled: true, baseURLString: API.baseURLString)  // NEVER CHANGE THIS
     }
 }
 

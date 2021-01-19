@@ -1,9 +1,14 @@
 /* 
   Localizable.strings
-  TopTalInterview
+  DemoSkillsApp
 
   Created by Stephen O'Connor on 19.01.21.
   
 */
 
 "PipelineTest" = "This is a Loc pipeline test";
+
+"APIClientError.noData" = "The Server returned no data even though we were expecting that.";
+"APIClientError.invalidResponseData" = "The Server returned data we weren't expecting.";
+"APIClientError.unexpected.stringArg" = "Unexpected error: %@";
+"APIClientError.Http.stringArg" = "An HTTP Error occurred: %@";

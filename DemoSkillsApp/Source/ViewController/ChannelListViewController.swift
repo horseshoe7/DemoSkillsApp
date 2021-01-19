@@ -1,13 +1,13 @@
 //
 //  ViewController.swift
-//  TopTalInterview
+//  DemoSkillsApp
 //
 //  Created by Stephen O'Connor on 19.01.21.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ChannelListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

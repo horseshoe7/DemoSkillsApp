@@ -19,6 +19,7 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
+  internal static let black = ColorAsset(name: "Black")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

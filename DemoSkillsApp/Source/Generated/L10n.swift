@@ -13,6 +13,25 @@ import Foundation
 internal enum L10n {
   /// This is a Loc pipeline test
   internal static let pipelineTest = L10n.tr("Localizable", "PipelineTest")
+
+  internal enum APIClientError {
+    /// The Server returned data we weren't expecting.
+    internal static let invalidResponseData = L10n.tr("Localizable", "APIClientError.invalidResponseData")
+    /// The Server returned no data even though we were expecting that.
+    internal static let noData = L10n.tr("Localizable", "APIClientError.noData")
+    internal enum Http {
+      /// An HTTP Error occurred: %@
+      internal static func stringArg(_ p1: String) -> String {
+        return L10n.tr("Localizable", "APIClientError.Http.stringArg", p1)
+      }
+    }
+    internal enum Unexpected {
+      /// Unexpected error: %@
+      internal static func stringArg(_ p1: String) -> String {
+        return L10n.tr("Localizable", "APIClientError.unexpected.stringArg", p1)
+      }
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
