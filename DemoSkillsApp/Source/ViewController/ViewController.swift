@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  DemoSkillsApp
+//  TopTalInterview
 //
 //  Created by Stephen O'Connor on 19.01.21.
 //

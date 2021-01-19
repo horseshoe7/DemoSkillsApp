@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TopTalInterview
+
+  Created by Stephen O'Connor on 19.01.21.
+  
+*/
+
+"PipelineTest" = "This is a Loc pipeline test";
