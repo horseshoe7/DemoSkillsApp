@@ -164,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				DCE6233A25B759B5009C5396 /* Podfile */,
+				DCE622E025B7518C009C5396 /* README.md */,
 				DCE622DF25B7517A009C5396 /* Documentation */,
 				DCE6226925B74E7C009C5396 /* DemoSkillsApp */,
 				DCE6228025B74E81009C5396 /* DemoSkillsAppTests */,
@@ -295,7 +296,6 @@
 		DCE622DF25B7517A009C5396 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				DCE622E025B7518C009C5396 /* README.md */,
 				DCE6237625B81639009C5396 /* Todo.txt */,
 			);
 			path = Documentation;
