@@ -13,6 +13,11 @@ The idea is that it simulates a TV-watching app.  The focus is really not on wha
 
 Suggestions for future work:
 - integrate with an actual backend.  For now, using Cocoapods and OHHTTPStubs to 'simulate' a server.
-- Show off GraphQL
+- Show off a GraphQL solution
+- Break the project out into dependent frameworks depending on purpose  (i.e. networking, system, etc.)
+
+## Contact
+
+Written by Stephen O'Connor.  Email:  oconnor.freelance@gmail.com
 
 

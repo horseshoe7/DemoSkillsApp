@@ -1,13 +1,2 @@
 ToDo.txt
 =========
-
-
-ViewModels
-----------
-
-Make sure you have a data model that shows how the view model prepares the data for the view.
- - i.e. have Date properties
- - maybe have 'lastWatchedAt' field
- 
- ChannelListViewModel
-  - observe channels property as the means to trigger refresh
