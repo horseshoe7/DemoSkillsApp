@@ -12,3 +12,5 @@
 "APIClientError.invalidResponseData" = "The Server returned data we weren't expecting.";
 "APIClientError.unexpected.stringArg" = "Unexpected error: %@";
 "APIClientError.Http.stringArg" = "An HTTP Error occurred: %@";
+
+"ChannelListViewController.title" = "Channel List";

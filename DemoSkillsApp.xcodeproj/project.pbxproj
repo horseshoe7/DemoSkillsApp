@@ -17,7 +17,6 @@
 		DCE622C225B74EDA009C5396 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE622AF25B74EDA009C5396 /* L10n.swift */; };
 		DCE622C425B74EDA009C5396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE622B325B74EDA009C5396 /* AppDelegate.swift */; };
 		DCE622C525B74EDA009C5396 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE622B425B74EDA009C5396 /* main.swift */; };
-		DCE622C625B74EDA009C5396 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE622B625B74EDA009C5396 /* ChannelListViewController.swift */; };
 		DCE622C725B74EDA009C5396 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE622B825B74EDA009C5396 /* Logging.swift */; };
 		DCE622E525B75343009C5396 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE622E425B75343009C5396 /* RoundedCornerButton.swift */; };
 		DCE622EA25B7536C009C5396 /* TypesAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE622E925B7536C009C5396 /* TypesAndConstants.swift */; };
@@ -36,6 +35,7 @@
 		DCE6237225B75FE1009C5396 /* MockStartSession.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236D25B75FE1009C5396 /* MockStartSession.json */; };
 		DCE6237325B75FE1009C5396 /* MockLogin.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236E25B75FE1009C5396 /* MockLogin.json */; };
 		DCE6237425B75FE1009C5396 /* MockWatchChannel.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236F25B75FE1009C5396 /* MockWatchChannel.json */; };
+		DCE6237A25B817E9009C5396 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6237925B817E9009C5396 /* ChannelListViewController.swift */; };
 		FF0790A88A0C863606328173 /* Pods_DemoSkillsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A66FB4137E793D1FEC553F /* Pods_DemoSkillsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +82,6 @@
 		DCE622AF25B74EDA009C5396 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		DCE622B325B74EDA009C5396 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCE622B425B74EDA009C5396 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		DCE622B625B74EDA009C5396 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		DCE622B825B74EDA009C5396 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		DCE622BA25B74EDA009C5396 /* swiftgen-localization.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "swiftgen-localization.yml"; sourceTree = "<group>"; };
 		DCE622BB25B74EDA009C5396 /* swiftgen-assets.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "swiftgen-assets.yml"; sourceTree = "<group>"; };
@@ -106,6 +105,8 @@
 		DCE6236D25B75FE1009C5396 /* MockStartSession.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockStartSession.json; sourceTree = "<group>"; };
 		DCE6236E25B75FE1009C5396 /* MockLogin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockLogin.json; sourceTree = "<group>"; };
 		DCE6236F25B75FE1009C5396 /* MockWatchChannel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockWatchChannel.json; sourceTree = "<group>"; };
+		DCE6237625B81639009C5396 /* Todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
+		DCE6237925B817E9009C5396 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				DCE6233625B75687009C5396 /* ApplicationViewController.swift */,
-				DCE622B625B74EDA009C5396 /* ChannelListViewController.swift */,
+				DCE6237725B817E9009C5396 /* ChannelList */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -280,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				DCE622E025B7518C009C5396 /* README.md */,
+				DCE6237625B81639009C5396 /* Todo.txt */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
@@ -351,6 +353,22 @@
 				DCE6236F25B75FE1009C5396 /* MockWatchChannel.json */,
 			);
 			path = MockResponses;
+			sourceTree = "<group>";
+		};
+		DCE6237725B817E9009C5396 /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				DCE6237825B817E9009C5396 /* ViewModels */,
+				DCE6237925B817E9009C5396 /* ChannelListViewController.swift */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		DCE6237825B817E9009C5396 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,12 +584,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE6232925B754A7009C5396 /* APIResult.swift in Sources */,
-				DCE622C625B74EDA009C5396 /* ChannelListViewController.swift in Sources */,
 				DCE6232D25B754A8009C5396 /* WatchChannelResponse.swift in Sources */,
 				DCE6233725B75687009C5396 /* ApplicationViewController.swift in Sources */,
 				DCE622C425B74EDA009C5396 /* AppDelegate.swift in Sources */,
 				DCE622C525B74EDA009C5396 /* main.swift in Sources */,
 				DCE6235D25B75BC5009C5396 /* ServerMock.swift in Sources */,
+				DCE6237A25B817E9009C5396 /* ChannelListViewController.swift in Sources */,
 				DCE622C725B74EDA009C5396 /* Logging.swift in Sources */,
 				DCE622E525B75343009C5396 /* RoundedCornerButton.swift in Sources */,
 				DCE622C225B74EDA009C5396 /* L10n.swift in Sources */,
