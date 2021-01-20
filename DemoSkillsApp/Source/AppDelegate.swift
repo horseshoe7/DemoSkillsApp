@@ -35,7 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configureServerMocking() {
-        ServerMock.initialize(enabled: true, baseURLString: API.baseURLString)  // NEVER CHANGE THIS
+        
+        ServerMock.initialize(sessionConfiguration: APIClient.shared.configuration,
+                              baseURLString: API.baseURLString)  // NEVER CHANGE THIS
+        
     }
 }
 

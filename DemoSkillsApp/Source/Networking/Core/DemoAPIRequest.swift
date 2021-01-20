@@ -9,7 +9,7 @@
 import Foundation
 
 public struct API {
-    static let baseURLString: String = "https://my-non-existent-url.com/"
+    static let baseURLString: String = "https://my-non-existent-url.com"
 }
 
 
@@ -17,7 +17,8 @@ public struct API {
 public enum DemoAPIRequest {
     
     case startSession(appID: String, deviceID: String)
-    case login(username: String, password: String)  // returns a list of channels
+    case login(username: String, password: String)
+    case getChannels
     case watchChannel(channelID: String)
     case stopChannel
     case stopSession
@@ -32,15 +33,17 @@ extension DemoAPIRequest: APIRequest {
     public var path: String {
         switch self {
         case .startSession:
-            return "session/start"
+            return "/session/start"
         case .login:
-            return "login"
+            return "/login"
+        case .getChannels:
+            return "/channels"
         case .watchChannel:
-            return "watch"
+            return "/watch"
         case .stopChannel:
-            return "stop"
+            return "/stop"
         case .stopSession:
-            return "session/goodbye"
+            return "/session/goodbye"
         }
     }
     
@@ -52,9 +55,9 @@ extension DemoAPIRequest: APIRequest {
             return SessionChangeResponse.self
         case .watchChannel:
             return WatchChannelResponse.self
-        case .stopChannel:
+        case .stopChannel, .login:
             return nil
-        case .login:
+        case .getChannels:
             return ChannelListResponse.self
         }
     }
@@ -91,6 +94,8 @@ extension DemoAPIRequest: APIRequest {
         switch self  {
         case .startSession, .login, .watchChannel, .stopSession, .stopChannel:
             return "POST"
+        case .getChannels:
+            return "GET"
         }
     }
     

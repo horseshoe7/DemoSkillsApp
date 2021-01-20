@@ -38,33 +38,6 @@ public struct SessionChangeResponse: Codable, CustomDebugStringConvertible {
  Example Response:
  
  {
-     "session": {
-         "logo_base_url": "https://logos.zattic.com/logos",
-         "vod_providers": [],
-         "start_page_public_id": null,
-         "privacy_policy": "http://zattoo.com/company/privacy/",
-         "ad_skip_time": -1,
-         "image_base_url": "https://images.zattic.com/cms-staging",
-         "max_signup_birthdate": "2004-12-10",
-         "aliased_country_code": "DE",
-         "power_guide_hash": "dd9a48e951b87d2e43e4d5edf47e2bbc",
-         "recording_eligible": false,
-         "ads_allowed": true,
-         "loggedin": false,
-         "vod_page_public_id": null,
-         "active": true,
-         "general_terms": "http://zattoo.com/company/terms/",
-         "block_size": 3,
-         "broadcast_page_public_id": "zattoo_broadcast_de",
-         "current_time": "2020-12-10T16:12:23Z",
-         "lineup_hash": "LU8a49e46f7b147731badecd289651904f",
-         "language": "en",
-         "tracking_urls": [],
-         "channel_page_public_id": null,
-         "recordings_page_public_id": null,
-         "ppid": "47a7e871534ddca5737812eddc1de597734878e5",
-         "html5_streaming": false
-     },
      "success": true
  }
  

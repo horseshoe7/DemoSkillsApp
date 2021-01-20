@@ -12,13 +12,12 @@ class ServerMock {
     
     static var baseURL: URL = URL(string: API.baseURLString)!
     
-    static func initialize(enabled: Bool = true, baseURLString: String = API.baseURLString) {
+    static func initialize(sessionConfiguration: URLSessionConfiguration?, baseURLString: String = API.baseURLString) {
         
         baseURL = URL(string: baseURLString)!
         
-        if enabled {
+        if let sessionConfig = sessionConfiguration {
             
-            let sessionConfig = URLSessionConfiguration.default
             sessionConfig.urlCache = nil
             
             // this method call works because we create our Alamofire.SessionManager with the default URLSessionConfiguration
@@ -29,6 +28,7 @@ class ServerMock {
             
             mockStartSession()
             mockLogin()
+            mockChannelList()
             mockWatchChannel()
             mockStopWatching()
             mockEndSession()
@@ -40,15 +40,22 @@ class ServerMock {
     
     private static func mockStartSession() {
         
-        let filename = "MockStartSession"
+        let filename = "MockSessionChange"
         let endpoint = DemoAPIRequest.startSession(appID: appID, deviceID: User.current.deviceID)
         self.stubEndpoint(endpoint, withJson: filename)
     }
     
     private static func mockLogin() {
         
-        let filename = "MockLogin"
-        let endpoint = DemoAPIRequest.startSession(appID: appID, deviceID: User.current.deviceID)
+        let filename = "MockEmpty"
+        let endpoint = DemoAPIRequest.login(username: "FAKE", password: "IRRELEVANT")
+        self.stubEndpoint(endpoint, withJson: filename)
+    }
+    
+    private static func mockChannelList() {
+        
+        let filename = "MockChannelList"
+        let endpoint = DemoAPIRequest.getChannels
         self.stubEndpoint(endpoint, withJson: filename)
     }
     
@@ -62,25 +69,30 @@ class ServerMock {
     
     private static func mockStopWatching() {
         
-        let filename = "MockStopWatching"
+        let filename = "MockEmpty"
         let endpoint = DemoAPIRequest.startSession(appID: appID, deviceID: User.current.deviceID)
         self.stubEndpoint(endpoint, withJson: filename)
     }
     
     private static func mockEndSession() {
         
-        let filename = "MockEndSession"
+        let filename = "MockSessionChange"
         let endpoint = DemoAPIRequest.startSession(appID: appID, deviceID: User.current.deviceID)
         self.stubEndpoint(endpoint, withJson: filename)
     }
     
-    private static func stubEndpoint(_ endpoint: APIRequest, withJson responseFilename: String) {
+    private static func stubEndpoint(_ endpoint: APIRequest, withJson responseFilename: String, responseTime: TimeInterval? = 1.2) {
         
         stub(condition: isHost(baseURL.host!) && isPath(endpoint.path)) { (_) -> OHHTTPStubsResponse in
             let filePath = Bundle.main.path(forResource: responseFilename, ofType: "json")!
-            return OHHTTPStubsResponse(fileAtPath: filePath,
-                                       statusCode: 200,
-                                       headers: ["Content-Type": "application/json"])
+            
+            let response = OHHTTPStubsResponse(fileAtPath: filePath,
+                                               statusCode: 200,
+                                               headers: ["Content-Type": "application/json"])
+            if let responseTime = responseTime {
+                response.responseTime = responseTime
+            }
+            return response
         }
     }
     

@@ -34,8 +34,19 @@ internal enum L10n {
   }
 
   internal enum ChannelListViewController {
+    /// Fetching Data...
+    internal static let loadingText = L10n.tr("Localizable", "ChannelListViewController.loadingText")
     /// Channel List
     internal static let title = L10n.tr("Localizable", "ChannelListViewController.title")
+  }
+
+  internal enum ChannelListViewTableCellModel {
+    internal enum LastWatched {
+      /// Last watched: %@ ago
+      internal static func stringArg(_ p1: String) -> String {
+        return L10n.tr("Localizable", "ChannelListViewTableCellModel.lastWatched.stringArg", p1)
+      }
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

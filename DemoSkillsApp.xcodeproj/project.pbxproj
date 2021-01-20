@@ -30,12 +30,15 @@
 		DCE6233325B75591009C5396 /* ChannelListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6233225B75590009C5396 /* ChannelListResponse.swift */; };
 		DCE6233725B75687009C5396 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6233625B75687009C5396 /* ApplicationViewController.swift */; };
 		DCE6235D25B75BC5009C5396 /* ServerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6235C25B75BC5009C5396 /* ServerMock.swift */; };
-		DCE6237025B75FE1009C5396 /* MockEndSession.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236B25B75FE1009C5396 /* MockEndSession.json */; };
-		DCE6237125B75FE1009C5396 /* MockStopWatching.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236C25B75FE1009C5396 /* MockStopWatching.json */; };
-		DCE6237225B75FE1009C5396 /* MockStartSession.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236D25B75FE1009C5396 /* MockStartSession.json */; };
-		DCE6237325B75FE1009C5396 /* MockLogin.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236E25B75FE1009C5396 /* MockLogin.json */; };
+		DCE6237025B75FE1009C5396 /* MockSessionChange.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236B25B75FE1009C5396 /* MockSessionChange.json */; };
+		DCE6237125B75FE1009C5396 /* MockEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236C25B75FE1009C5396 /* MockEmpty.json */; };
+		DCE6237325B75FE1009C5396 /* MockChannelList.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236E25B75FE1009C5396 /* MockChannelList.json */; };
 		DCE6237425B75FE1009C5396 /* MockWatchChannel.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE6236F25B75FE1009C5396 /* MockWatchChannel.json */; };
 		DCE6237A25B817E9009C5396 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6237925B817E9009C5396 /* ChannelListViewController.swift */; };
+		DCE6237D25B81829009C5396 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6237C25B81829009C5396 /* ChannelListViewModel.swift */; };
+		DCE6238025B8183E009C5396 /* ChannelListItemTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6237F25B8183E009C5396 /* ChannelListItemTableCellModel.swift */; };
+		DCE6238325B81B2A009C5396 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6238225B81B2A009C5396 /* Box.swift */; };
+		DCE6238625B81D94009C5396 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6238525B81D94009C5396 /* Date+Extensions.swift */; };
 		FF0790A88A0C863606328173 /* Pods_DemoSkillsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A66FB4137E793D1FEC553F /* Pods_DemoSkillsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,13 +103,16 @@
 		DCE6233625B75687009C5396 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		DCE6233A25B759B5009C5396 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Podfile; sourceTree = "<group>"; };
 		DCE6235C25B75BC5009C5396 /* ServerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerMock.swift; sourceTree = "<group>"; };
-		DCE6236B25B75FE1009C5396 /* MockEndSession.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockEndSession.json; sourceTree = "<group>"; };
-		DCE6236C25B75FE1009C5396 /* MockStopWatching.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockStopWatching.json; sourceTree = "<group>"; };
-		DCE6236D25B75FE1009C5396 /* MockStartSession.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockStartSession.json; sourceTree = "<group>"; };
-		DCE6236E25B75FE1009C5396 /* MockLogin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockLogin.json; sourceTree = "<group>"; };
+		DCE6236B25B75FE1009C5396 /* MockSessionChange.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockSessionChange.json; sourceTree = "<group>"; };
+		DCE6236C25B75FE1009C5396 /* MockEmpty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockEmpty.json; sourceTree = "<group>"; };
+		DCE6236E25B75FE1009C5396 /* MockChannelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockChannelList.json; sourceTree = "<group>"; };
 		DCE6236F25B75FE1009C5396 /* MockWatchChannel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockWatchChannel.json; sourceTree = "<group>"; };
 		DCE6237625B81639009C5396 /* Todo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
 		DCE6237925B817E9009C5396 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		DCE6237C25B81829009C5396 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		DCE6237F25B8183E009C5396 /* ChannelListItemTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListItemTableCellModel.swift; sourceTree = "<group>"; };
+		DCE6238225B81B2A009C5396 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		DCE6238525B81D94009C5396 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				DCE622E925B7536C009C5396 /* TypesAndConstants.swift */,
+				DCE6238225B81B2A009C5396 /* Box.swift */,
+				DCE6238525B81D94009C5396 /* Date+Extensions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,10 +354,9 @@
 		DCE6236625B75F96009C5396 /* MockResponses */ = {
 			isa = PBXGroup;
 			children = (
-				DCE6236B25B75FE1009C5396 /* MockEndSession.json */,
-				DCE6236E25B75FE1009C5396 /* MockLogin.json */,
-				DCE6236D25B75FE1009C5396 /* MockStartSession.json */,
-				DCE6236C25B75FE1009C5396 /* MockStopWatching.json */,
+				DCE6236B25B75FE1009C5396 /* MockSessionChange.json */,
+				DCE6236E25B75FE1009C5396 /* MockChannelList.json */,
+				DCE6236C25B75FE1009C5396 /* MockEmpty.json */,
 				DCE6236F25B75FE1009C5396 /* MockWatchChannel.json */,
 			);
 			path = MockResponses;
@@ -367,6 +374,8 @@
 		DCE6237825B817E9009C5396 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DCE6237C25B81829009C5396 /* ChannelListViewModel.swift */,
+				DCE6237F25B8183E009C5396 /* ChannelListItemTableCellModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -458,14 +467,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE622BF25B74EDA009C5396 /* Main.storyboard in Resources */,
-				DCE6237325B75FE1009C5396 /* MockLogin.json in Resources */,
+				DCE6237325B75FE1009C5396 /* MockChannelList.json in Resources */,
 				DCE622C025B74EDA009C5396 /* Localizable.strings in Resources */,
-				DCE6237125B75FE1009C5396 /* MockStopWatching.json in Resources */,
+				DCE6237125B75FE1009C5396 /* MockEmpty.json in Resources */,
 				DCE6237425B75FE1009C5396 /* MockWatchChannel.json in Resources */,
 				DCE622BD25B74EDA009C5396 /* Assets.xcassets in Resources */,
 				DCE622BE25B74EDA009C5396 /* LaunchScreen.storyboard in Resources */,
-				DCE6237025B75FE1009C5396 /* MockEndSession.json in Resources */,
-				DCE6237225B75FE1009C5396 /* MockStartSession.json in Resources */,
+				DCE6237025B75FE1009C5396 /* MockSessionChange.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE6232925B754A7009C5396 /* APIResult.swift in Sources */,
+				DCE6238625B81D94009C5396 /* Date+Extensions.swift in Sources */,
 				DCE6232D25B754A8009C5396 /* WatchChannelResponse.swift in Sources */,
 				DCE6233725B75687009C5396 /* ApplicationViewController.swift in Sources */,
 				DCE622C425B74EDA009C5396 /* AppDelegate.swift in Sources */,
@@ -594,8 +603,11 @@
 				DCE622E525B75343009C5396 /* RoundedCornerButton.swift in Sources */,
 				DCE622C225B74EDA009C5396 /* L10n.swift in Sources */,
 				DCE6232B25B754A7009C5396 /* APIRequest.swift in Sources */,
+				DCE6238025B8183E009C5396 /* ChannelListItemTableCellModel.swift in Sources */,
 				DCE622C125B74EDA009C5396 /* Assets.swift in Sources */,
 				DCE6232A25B754A7009C5396 /* HTTPError.swift in Sources */,
+				DCE6237D25B81829009C5396 /* ChannelListViewModel.swift in Sources */,
+				DCE6238325B81B2A009C5396 /* Box.swift in Sources */,
 				DCE6233325B75591009C5396 /* ChannelListResponse.swift in Sources */,
 				DCE622EA25B7536C009C5396 /* TypesAndConstants.swift in Sources */,
 				DCE6232C25B754A7009C5396 /* APIClient.swift in Sources */,

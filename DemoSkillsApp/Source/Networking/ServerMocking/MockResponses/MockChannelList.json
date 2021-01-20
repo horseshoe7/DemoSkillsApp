@@ -1,0 +1,17 @@
+{
+    "channels": [
+        {
+            "cid": "SOMERANDOMSTriNG",
+            "name": "BBC News",
+            "description": "World class news, all with English accents.",
+            "last_watched_at": "2021-01-19T16:56:57+01:00",
+            "thumb_url": "https://p.kindpng.com/picc/s/198-1985227_bbc-world-news-logo-png-transparent-png.png"
+        },
+        {
+            "cid": "SOMEotherRANDOMSTriNG",
+            "name": "Fox News",
+            "description": "American news, brought to you by...",
+            "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Fox_News_Channel_logo.svg/600px-Fox_News_Channel_logo.svg.png"
+        }
+    ]
+}

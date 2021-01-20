@@ -20,6 +20,7 @@
 internal enum Asset {
   internal static let accentColor = ColorAsset(name: "AccentColor")
   internal static let black = ColorAsset(name: "Black")
+  internal static let secondaryLabel = ColorAsset(name: "SecondaryLabel")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

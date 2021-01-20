@@ -23,15 +23,17 @@ public class APIClient: RequestSending {
     
     public static let shared = APIClient()
     
+    var configuration = URLSessionConfiguration.default
+    
     lazy var session: URLSession = {
         
         let queue = OperationQueue()
         //queue.maxConcurrentOperationCount = 4  // configure for connectivity, i.e. wifi, cellular, etc.
         
-        var configuration = URLSessionConfiguration.default
+        var configuration = self.configuration
         configuration.multipathServiceType = .handover
         
-        let session = URLSession(configuration: .default,
+        let session = URLSession(configuration: configuration,
                                  delegate: nil,
                                  delegateQueue: queue)
         

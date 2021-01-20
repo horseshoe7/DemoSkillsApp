@@ -7,17 +7,24 @@
 
 import Foundation
 
+fileprivate let dateFormatter: ISO8601DateFormatter = {
+    let iso = ISO8601DateFormatter()
+    return iso
+}()
+
 public struct ChannelListItem: Codable {
     public let name: String
     public let channelDescription: String
     public let channelID: String
     public let thumbnailURL: URL?
+    public let lastWatchedAt: Date?
     
     enum CodingKeys: String, CodingKey {
-        case name
-        case channelDescription
-        case channelID
-        case thumbnailURL
+        case name = "name"
+        case channelDescription = "description"
+        case channelID = "cid"
+        case lastWatchedAt = "last_watched_at"
+        case thumbnailURL = "thumb_url"
     }
     
     public init(from decoder: Decoder) throws {
@@ -26,6 +33,11 @@ public struct ChannelListItem: Codable {
         name = try values.decode(String.self, forKey: .name)
         channelDescription = try values.decode(String.self, forKey: .channelDescription)
         channelID = try values.decode(String.self, forKey: .channelID)
+        if let dateString = try values.decodeIfPresent(String.self, forKey: .lastWatchedAt) {
+            lastWatchedAt = dateFormatter.date(from: dateString)
+        } else {
+            lastWatchedAt = nil
+        }
         if let urlString = try values.decodeIfPresent(String.self, forKey: .thumbnailURL) {
             thumbnailURL = URL(string: urlString)
         } else {
@@ -39,6 +51,11 @@ public struct ChannelListItem: Codable {
         try container.encode(name, forKey: .name)
         try container.encode(channelDescription, forKey: .channelDescription)
         try container.encode(channelID, forKey: .channelID)
+        
+        if let lastWatched = lastWatchedAt {
+            let string = dateFormatter.string(from: lastWatched)
+            try container.encode(string, forKey: .lastWatchedAt)
+        }
     }
     
     public var debugDescription: String {
@@ -51,7 +68,7 @@ public struct ChannelListResponse: Codable, CustomDebugStringConvertible {
     public let channelList: [ChannelListItem]
     
     enum CodingKeys: String, CodingKey {
-        case channelList
+        case channelList = "channels"
     }
     
     public init(from decoder: Decoder) throws {

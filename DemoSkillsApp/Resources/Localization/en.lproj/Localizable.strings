@@ -14,3 +14,6 @@
 "APIClientError.Http.stringArg" = "An HTTP Error occurred: %@";
 
 "ChannelListViewController.title" = "Channel List";
+"ChannelListViewController.loadingText" = "Fetching Data...";
+
+"ChannelListViewTableCellModel.lastWatched.stringArg" = "Last watched: %@ ago";
