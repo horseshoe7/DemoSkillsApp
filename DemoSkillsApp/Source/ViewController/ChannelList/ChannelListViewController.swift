@@ -51,7 +51,7 @@ extension ChannelListCell {
 }
 
 class ChannelListViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel: ChannelListViewModel = ChannelListViewModel()
@@ -86,7 +86,7 @@ extension ChannelListViewController: UITableViewDelegate, UITableViewDataSource 
         
         guard viewModel.channels.value.count > 0 else {
             guard let loadingCell = tableView.dequeueReusableCell(withIdentifier: ChannelLoadingCell.reuseIdentifier,
-                                                           for: indexPath) as? ChannelLoadingCell else {
+                                                                  for: indexPath) as? ChannelLoadingCell else {
                 fatalError("You hooked it up wrong.")
             }
             loadingCell.titleLabel.text = viewModel.auxCellText
@@ -119,6 +119,11 @@ extension ChannelListViewController: UITableViewDelegate, UITableViewDataSource 
         
         log.info("Wants to watch channel with ID: \(channel.model.channelID)")
         
+        let alert = UIAlertController(title: "Sorry!",
+                                      message: "Not implemented.  This is just a demo app and not a very useful one.  Just _imagine_ watching the news.  :)",
+                                      preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
